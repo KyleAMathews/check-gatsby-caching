@@ -1,0 +1,53 @@
+{
+	"name": "check-gatsby-caching",
+	"version": "0.0.0",
+	"license": "MIT",
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": ["cli.js", "ui.js"],
+	"dependencies": {
+		"@turist/fetch": "^7.1.7",
+		"cheerio": "^1.0.0-rc.3",
+		"import-jsx": "^4.0.0",
+		"ink": "^3.0.7",
+		"ink-spinner": "^4.0.1",
+		"jest-diff": "^26.5.2",
+		"meow": "^7.1.1",
+		"node-fetch": "^2.6.1",
+		"parse-cache-control": "^1.0.1",
+		"react": "^16.14.0",
+		"strip-ansi": "^6.0.0",
+		"url-join": "^4.0.1"
+	},
+	"devDependencies": {
+		"@ava/babel": "^1.0.1",
+		"@babel/preset-env": "^7.12.1",
+		"@babel/preset-react": "^7.12.1",
+		"@babel/register": "^7.12.1",
+		"ava": "^3.13.0",
+		"chalk": "^4.1.0",
+		"eslint-config-xo-react": "^0.23.0",
+		"eslint-plugin-react": "^7.21.4",
+		"eslint-plugin-react-hooks": "^4.1.2",
+		"ink-testing-library": "^2.1.0",
+		"xo": "^0.33.1"
+	},
+	"ava": {
+		"babel": true,
+		"require": ["@babel/register"]
+	},
+	"babel": {
+		"presets": ["@babel/preset-env", "@babel/preset-react"]
+	},
+	"xo": {
+		"extends": "xo-react",
+		"rules": {
+			"react/prop-types": "off"
+		}
+	}
+}

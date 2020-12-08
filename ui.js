@@ -27,7 +27,7 @@ const Check = ({ url, cacheControl, label, expectedCacheHeader }) => {
       same = true;
     }
 
-    message = <Text>✅ {same ? `headers are correct!` : headerDiff}</Text>;
+    message = <Text>{same ? `✅ headers are correct!` : headerDiff}</Text>;
   }
 
   return (

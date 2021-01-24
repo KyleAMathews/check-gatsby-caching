@@ -18,7 +18,7 @@ const Check = ({ url, cacheControl, label, expectedCacheHeader }) => {
       </Text>
     );
   } else {
-    const headerDiff = diff(cacheControl, expectedCacheHeader);
+    const headerDiff = diff(expectedCacheHeader, cacheControl);
 
     let same = false;
     if (
@@ -28,7 +28,7 @@ const Check = ({ url, cacheControl, label, expectedCacheHeader }) => {
     }
 
     message = (
-      <Text>{same ? `✅ headers are correct!` : `❌ ${headerDiff}`}</Text>
+      <Text>{same ? `✅ headers are correct!` : `❌\n\n${headerDiff}`}</Text>
     );
   }
 
